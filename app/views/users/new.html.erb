@@ -1,6 +1,7 @@
 <h1>Hello World!</h1>
 
 <form action="/users" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <ul>
     <li>
       <label for="username">Username:</label>
