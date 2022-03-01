@@ -1,14 +1,19 @@
 <h1>Hello World!</h1>
+
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
 <div>
-    <ul>
-  <% @user.errors.full_messages.each do |e| %>
-    <li><%= e %></li>
-  <% end %>
-    </ul>
+  <ul>
+    <% @user.errors.full_messages.each do |e| %>
+      <li><%= e %></li>
+    <% end %>
+  </ul>
 </div>
 
 <form action="/users" method="post">
-      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <ul>
     <li>
       <label for="username">Username:</label>
