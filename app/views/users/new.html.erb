@@ -17,11 +17,11 @@
   <ul>
     <li>
       <label for="username">Username:</label>
-      <input type="text" name="user[username]" id="user[username]">
+      <input type="text" name="user[username]" id="user[username]" value="<%= @user[:username] %>">
     </li>
     <li>
       <label for="user[email]">Email:</label>
-      <input id="user[email]" type="email" name="user[email]">
+      <input id="user[email]" type="email" name="user[email]" value="<%= @user[:email] %>">
     </li>
     <li>
       <label for="user[password]">Password:</label>
