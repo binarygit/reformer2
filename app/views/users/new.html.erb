@@ -12,6 +12,8 @@
   </ul>
 </div>
 
+<!--
+  
 <form action="/users" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <ul>
@@ -49,6 +51,28 @@
     </li>
     <li>
       <%= submit_tag %>
+    </li>
+  </ul>
+<% end %>
+
+-->
+
+<%= form_with model: @user do |f| %>
+  <ul>
+    <li>
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+    </li>
+    <li>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </li>
+    <li>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </li>
+    <li>
+      <%= f.submit %>
     </li>
   </ul>
 <% end %>
