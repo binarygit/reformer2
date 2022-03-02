@@ -32,3 +32,23 @@
     </li>
   </ul>
 </form>
+
+<%= form_tag('/users')  do %>
+  <ul>
+    <li>
+      <%= label_tag 'username' %>:
+      <%= text_field :user, :username %>
+    </li>
+    <li>
+      <%= label_tag 'user_email' %>
+      <%= email_field :user, :email %>
+    </li>
+    <li>
+      <%= label_tag 'user_password' %>
+      <%= password_field :user, :password %>
+    </li>
+    <li>
+      <%= submit_tag %>
+    </li>
+  </ul>
+<% end %>
